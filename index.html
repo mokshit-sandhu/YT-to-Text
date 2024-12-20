@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Audio Transcription</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Audio Transcription</h1>
+        <form id="transcription-form">
+            <label for="youtube_url">Enter YouTube Video URL:</label>
+            <input type="text" id="youtube_url" name="youtube_url" required>
+            <button type="submit">Transcribe</button>
+        </form>
+
+        <h2>Transcription:</h2>
+        <pre id="transcription-text"></pre>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
